@@ -1,2 +1,51 @@
 @import "../components/bootstrap/scss/bootstrap";
-@import "../components/font-awesome/scss/font-awesome.scss"
+@import "../components/components-font-awesome/scss/font-awesome.scss";
+
+body{
+	font-family: 'Nunito', sans-serif;
+	color:#222;
+}
+
+p{
+	margin:0;
+}
+
+//super info
+.superinfo-bg{
+	background-color:#122ab2;
+	color:white;
+}
+
+.superinfo{
+	display:flex;
+	min-height:40px;
+	justify-content:space-between;
+	flex-wrap:wrap;
+	align-items:center;
+	p, a{
+		margin:10px 0px;
+	}
+}
+
+//HEADER
+
+.header-bg{
+	background-color:#2c70ff;
+}
+
+.header-top{
+	padding:5px 0px;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;		
+	flex-wrap:wrap;
+}
+
+nav{
+	a{
+	color:white;	
+	}
+	li{
+		list-style:none;
+	}	
+} 
