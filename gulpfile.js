@@ -17,7 +17,6 @@ gulp.task("cache:js", function(){
 	del("./dist/js/app.js")
 });
 
-
 /* tarefa compilar sass para css*/
 gulp.task("sass", ['cache:css'], function(){
 	return gulp.src("./src/sass/style.scss")
@@ -27,7 +26,6 @@ gulp.task("sass", ['cache:css'], function(){
 	.pipe(gulp.dest("./dist/css"))
 	.pipe(browserSync.stream());
 });	
-
 
 /* tarefa minifica o html*/
 gulp.task("html", function(){

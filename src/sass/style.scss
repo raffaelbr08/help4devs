@@ -10,12 +10,17 @@ p{
 	margin:0;
 }
 
-//super info
+h1{
+	color:white;
+	font-weight:bold;
+	margin:0px 10px;
+}
+
+//SUPER INFO
 .superinfo-bg{
 	background-color:#122ab2;
 	color:white;
 }
-
 .superinfo{
 	display:flex;
 	min-height:40px;
@@ -23,12 +28,11 @@ p{
 	flex-wrap:wrap;
 	align-items:center;
 	p, a{
-		margin:10px 0px;
+		margin:10px 10px;
 	}
 }
 
-//HEADER
-
+//HEADER -- NAV
 .header-bg{
 	background-color:#2c70ff;
 }
@@ -43,9 +47,70 @@ p{
 
 nav{
 	a{
-	color:white;	
+		color:white;	
 	}
 	li{
 		list-style:none;
 	}	
 } 
+
+// INTRO
+.intro{
+	font-size:3em;
+	line-height:1;
+	font-weight:bold;
+	max-width:1140px;
+	margin:0 auto;
+	padding:60px 25px;
+}
+
+
+//SOBRE
+#sobre {
+		border-top:2px solid #2c70ff;
+		border-bottom:2px solid #2c70ff;
+		padding:60px 25px;
+		max-width:1140px;
+		margin:0 auto;	
+		display:flex;
+		flex-wrap:wrap;	
+		.sobre-info{
+			flex:2 1 300px;
+			h2{
+				font-size:3em;
+				font-weight:bold;
+				margin-bottom:.5em;
+			}
+			p{
+				font-size:1.25em;
+				line-height:1.4;
+				margin-bottom:1em;
+				color:#7c7c7c;
+			}
+		}
+		.sobre-img{
+			flex:1 1 160px;
+			margin:0 10px;
+		}
+}
+
+// PRODUTOS
+
+#produtos{
+	max-width:1140px;
+	margin:0 auto;
+	padding:60px 25px;
+	h2{
+		font-size:3em;
+		font-weight:bold;
+		margin:0 10px 60px 10px; 
+	}
+	.produtos{
+		display:flex;
+		flex-wrap:wrap;
+		.produtos-item{
+			flex:1;
+		}
+	}
+
+}
