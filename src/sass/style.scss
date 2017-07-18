@@ -1,6 +1,7 @@
 @import "../components/bootstrap/scss/bootstrap";
 @import "../components/components-font-awesome/scss/font-awesome.scss";
 
+//CSS RESET
 body{
 	font-family: 'Nunito', sans-serif;
 	color:#222;
@@ -15,10 +16,16 @@ h1{
 	font-weight:bold;
 	margin:0px 10px;
 }
+img{
+	max-width:100%;
+	display:block;
+}
+//CSS RESET
+
 
 //SUPER INFO
 .superinfo-bg{
-	background-color:#122ab2;
+	background-color:#122ab2;	
 	color:white;
 }
 .superinfo{
@@ -27,10 +34,14 @@ h1{
 	justify-content:space-between;
 	flex-wrap:wrap;
 	align-items:center;
+	max-width:1140px;
+	margin:0 auto;
 	p, a{
 		margin:10px 10px;
 	}
 }
+//SUPER INFO
+
 
 //HEADER -- NAV
 .header-bg{
@@ -38,6 +49,10 @@ h1{
 }
 
 .header-top{
+	max-width:1140px;
+	margin:0 auto;
+	max-width:1140px;
+	margin:0 auto;
 	padding:5px 0px;
 	display:flex;
 	justify-content:space-between;
@@ -53,6 +68,8 @@ nav{
 		list-style:none;
 	}	
 } 
+//HEADER -- NAV
+
 
 // INTRO
 .intro{
@@ -63,6 +80,8 @@ nav{
 	margin:0 auto;
 	padding:60px 25px;
 }
+
+// INTRO
 
 
 //SOBRE
@@ -93,9 +112,10 @@ nav{
 			margin:0 10px;
 		}
 }
+//SOBRE
+
 
 // PRODUTOS
-
 #produtos{
 	max-width:1140px;
 	margin:0 auto;
@@ -108,9 +128,216 @@ nav{
 	.produtos{
 		display:flex;
 		flex-wrap:wrap;
+		align-items:flex-end;
 		.produtos-item{
-			flex:1;
+			flex:1 1 175px;	
+			margin:10px;
+				&.purple{
+					border-top:3px solid #ae81ff;
+				}
+				&.orange{
+					border-top:3px solid orange;
+				}
+				&.blue{
+					border-top:3px solid blue;
+				}
+			h3{
+				font-size:3em;
+				color:#a4a4a4;
+				background:#f7f7f7;
+				margin-bottom:0px;
+				padding:60px 20px;				
+			}		
+		}
+	}
+}
+// PRODUTOS
+
+//PRECOS
+.preco{
+	display:flex;
+	background-color:#f7f7f7;
+	padding:60px;
+	flex-wrap:wrap;
+	align-items:flex-end;
+	@media (max-width:800px){
+		padding-left:10px;
+		padding-right:10px;
+	}
+	.preco-item{
+		flex:1;
+		border:4px solid white;
+		padding:20px;
+		margin:10px;
+		min-width:260px;
+		@media (max-width:800px){
+			&:nth-child(3){
+				order:-3;
+			}
+			&:nth-child(2){
+				order:-2;
+			}
+		}
+		h2{
+			font-size:3em;
+			color:#a4a4a4;
+			text-align:center;
+			margin-top:20px;			
+		}
+		span{
+			max-width:300px;
+			margin:20px auto;
+			display:block;
+			font-size:3em;
+			text-align:center;
+			padding:10px;
+			border-top:4px solid white;
+			border-bottom:4px solid white;
+			font-weight:bold;
+		}
+		sup{
+			font-size:.5em;	
+		}
+		ul{
+			margin:0 auto;
+			max-width:300px;			
+			font-size:1.25em;			
+			list-style:none;
+			color:#7c7c7c;
+			font-style:italic;
+			padding:0;	
+			li{
+				display:flex;
+				justify-content:space-between;
+				align-items:center;
+				margin-bottom:20px;
+			}
+			li::after{
+				content:"";
+				display:block;
+				background:pink;
+				width:6px;
+				height:6px;
+				border-radius:50%;
+			}			
+		}
+		a{
+			max-width:300px;
+			display:block;
+			margin: 20px auto;
+			border: 4px solid;
+			color:#222222;
+			text-transform:uppercase;
+			font-weight:bold;
+			font-size:2.25em;
+			padding:15px 0;
+			text-align:center;
+			&:hover{
+				text-decoration:none;
+				color:orange;
+			}
 		}
 	}
 
+}	
+//PRECOS
+
+//QUALIDADE
+
+.qualidade{
+	max-width:1140px;
+	margin:60px auto;
+	display:flex;
+	flex-wrap:wrap;
+	.post{
+		flex:1 1 400px;
+		margin:20px 10px;
+		&:nth-of-type(2n +1) h2::before{
+				background:red;
+		}
+		h2{
+			font-size:2.25em;
+			color:#a4a4a4;
+			margin-bottom:20px;
+			&::before{
+				content:'';
+				display:inline-block;
+				width:8px;
+				height:30px;
+				margin-right:10px;
+				background:blue;
+			}
+			
+		}
+		p{
+			font-size:1.25em;
+			line-height:1.4;
+			color:#7c7c7c;
+		}
+		
+	}
 }
+
+//FOOTER 
+.footer{
+	background:#f7f7f7;
+	padding:60px calc((100% - 1140px)/2);
+	display:flex;
+	flex-wrap:wrap;
+	.newllaster-info{
+		padding:10px;
+		flex:1 1 260px;
+		h2{
+			font-size:3em;
+			color:#a4a4a4;
+			font-weight:bold;
+		}
+		p{
+			font-size:1.25em;
+			font-style:italic;
+		}
+	}
+	.newllestter-form{
+		flex:2 1 260px;
+		align-self:center;
+		margin:0 10px;
+		display:flex;
+		flex-wrap:wrap;		
+		input{
+			flex:3 1 200px;
+			max-height:100px;
+			font-size:1.25em;
+			color:#7c7c7c;
+			font-style:italic;
+			border:4px solid #2c70ff;
+			background:transparent;
+			padding:10px;
+			margin:0px;
+			border-radius:0px;
+		}
+		button{
+			flex:1 1 200px;
+			font-family:"Nunito";
+			font-weight:bold;
+			text-transfom:uppercase;
+			font-size:2.25em;
+			background:#2c70ff;
+			border:none;
+			margin:0;
+			padding:8px 10px;
+			color:white;
+		}
+	}
+}
+footer{
+	display:flex;
+	height:100px;
+	background-color:blue;
+	align-items:center;
+	justify-content:center;
+	p{
+		margin:10px;
+		
+	}
+}
+
